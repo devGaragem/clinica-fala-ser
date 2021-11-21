@@ -1,0 +1,527 @@
+/*
+Theme Name: Clínica Fala-Ser
+Author: Alison Ranier (AlisonR27)
+Author URI: https://github.com/AlisonR27/
+*/
+
+:root {
+  --primary-color: #005550;
+  --primary-color-dark: #0a645e;
+  --primary-color-darker: #0a4642;
+  --secondary-color: #d5a981;
+  --secondary-color-dark: #c7915e;
+  --secondary-color-darker: #9c724a;
+  --light-secondary-color: #eae2d1;
+  --default-text: #181818;
+}
+html {
+  scroll-behavior: smooth;
+
+}
+body {
+  margin: 0;
+  font-family: 'Marcellus';  overflow-x: hidden;
+}
+body > main {
+  position: relative;
+}
+.shape {
+  position: absolute;
+  z-index: 9999;
+  width:12%;
+}
+.shape-esquerda {
+  left:0;
+  top: 20vh;
+  margin-left:-50px;
+}
+.shape-esquerda.home {
+  top: 120vh;
+}
+.shape-direita {
+  right:0;
+  bottom: -25vh;
+  margin-right:-20px;
+}
+.navigation-bar ul{
+  width: 80%;
+  margin: auto;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  list-style: none;
+  padding:0;
+
+}
+.navigation-bar ul li a {
+  color: var(--light-secondary-color);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.navigation-bar ul li a:hover {
+  text-decoration: underline;
+}
+
+header {
+  background-color: var(--primary-color);
+  padding: 20px 0;
+}
+
+.site-logo {
+  width: 200px;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--light-secondary-color);
+  text-align: center;
+  padding: 75px 0;
+}
+footer h1 {
+  font-weight: lighter;
+  font-size:2.2rem;
+}
+footer #contato {
+  max-width:990px;
+  margin: auto;
+}
+footer .row {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+}
+footer .row .dados p{
+  font-family: 'Mulish';
+  margin-bottom: 5px;
+}
+footer form {
+  display: flex;
+  flex-direction: column;
+}
+footer form label {
+  margin-bottom: 10px;
+}
+footer form input {
+  margin-bottom: 10px;
+}
+footer .row > * {
+  width: 50%;
+}
+footer form input, footer form textarea{
+  border-radius: 1em;
+  padding: 10px 0px;
+  border:0;
+}
+#copyright {
+  background-color: var(--primary-color);
+  color: var(--light-secondary-color);
+  text-align: center;
+  border-top: 1px solid;
+  border-color: var(--light-secondary-color);
+  padding: 20px 0;
+}
+#copyright p {
+  margin-top: 0;
+}
+#copyright > p a {
+  display: inline-block;
+  vertical-align: middle;
+}
+#copyright p:last-child{
+  margin:0;
+}
+
+#front-page-header {
+  position: relative;
+  overflow-x:clip;
+}
+#front-page-header .apresentacao {
+  max-width: 990px;
+  margin:auto;
+  
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 160px 0;
+  
+  color:var(--secondary-color);
+}
+.apresentacao h1 {
+  margin: 0;
+  font-size:3rem;
+  font-weight: normal;
+}
+.apresentacao p {
+  width:50%;
+}
+.home .overflowing-bg {
+  width: 100%;
+}
+main:not(.home) #front-page-header {
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+.overflowing-bg {
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: -1;
+
+  pointer-events: none;
+  user-select: none;
+
+}
+
+#servicos {
+  text-align: center;
+}
+
+#servicos main {
+  max-width: 900px;
+  position: relative;
+  margin: auto;
+}
+#servicos h1 {
+  color: var(--primary-color);
+  font-size:2.2rem;
+}
+#servicos article img {
+  width: 200px;
+  height:200px;
+ 
+  border:0;
+
+  background-color: var(--primary-color);
+  border-radius: 100%;
+  margin: auto;
+}
+#servicos article > p {
+  font-family: 'Mulish';
+}
+#servicos .prev, #servicos .next {
+  position: absolute;
+  top: 30%;
+  z-index: 5;
+}
+#servicos .prev {
+  left: -50px;
+}
+#servicos .next {
+  right: -50px;
+}
+.button {
+  border:0;
+  padding: 0.5rem 1.25rem;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+}
+.small-button {
+  font-size:0.7rem;
+  padding: 0.3rem 0.9rem;
+}
+.text-primary {
+  color: var(--primary-color);
+}
+.text-secondary{
+  color:var(--secondary-color);
+}
+.font-sans-serif {
+  font-family: 'Mulish';
+}
+.primary-button {
+  background-color: var(--primary-color);
+  color: white;
+}
+.primary-button:hover {
+  background-color: var(--primary-color-dark);
+}
+.primary-button:focus {
+  background-color: var(--primary-color-darker);
+}
+
+.light-secondary-button {
+  background-color: var(--light-secondary-color);
+  color: var(--primary-color);
+}
+.light-secondary-button:hover {
+  background-color:rgb(223, 209, 178);
+}
+.light-secondary-button:focus {
+  background-color:rgb(206, 189, 152);
+}  
+.secondary-button {
+  background-color: var(--secondary-color);
+  color: white;
+}
+.secondary-button:hover {
+  background-color: var(--secondary-color-dark);
+}
+.secondary-button:focus {
+  background-color: var(--secondary-color-darker);
+}
+
+
+.button.rounded {
+  border-radius: 2rem;
+}
+img.circle {
+  border-radius: 100%;
+}
+.visit-blog {
+  margin: 40px 0;
+}
+#blog {
+  margin-bottom: 100px;
+}
+#blog .header-title, #blog .visit-blog {
+  position: relative;
+  text-align: center;
+}
+#blog .header-title:before, #blog .visit-blog:before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  width:80%;
+  height:1px;
+  background: var(--light-secondary-color);
+  top:50%;
+  left:10%;
+}
+#blog h1 {
+  color: var(--primary-color);
+  background-color: white;
+  display: inline-block;
+  padding: 15px; 
+}
+#blog main {
+  display: grid;
+  grid-auto-rows: 240px;
+  row-gap: 30px;
+  grid-auto-flow: row;
+  max-width:  990px;
+  margin: auto;
+}
+#blog main article {
+  display: flex;
+  flex-direction: row;
+}
+#blog main article .content {
+  margin-left:20px;
+}
+#blog article .content h3 {
+  font-size: 2rem;
+  margin:0 0 0.7em 0;
+}
+#blog article .content p {
+  margin:0;
+  font-family: 'Mulish';
+}
+#blog article .content sub {
+  font-family: 'Mulish';
+  color: #505050;
+}
+#blog main article img {
+  width: 40%;
+  object-fit: cover;
+}
+#blog main .content .button {
+  margin-top: 0.5em;
+  display: inline-block;
+}
+#colaboradores {
+  max-width: 990px;
+  margin: auto;
+}
+#colaboradores article {
+  display: flex;
+}
+#colaboradores article img {
+  width: 300px;
+  height: 300px;
+
+  position: relative;
+  display: inline-block;
+  background-color: var(--primary-color);
+  border-radius: 100%;
+}
+#colaboradores article .content {
+  margin-left: 50px;
+}
+#colaboradores article h1 {
+  font-size:2.5rem;
+  margin: 0;
+  color: var(--primary-color);
+  font-weight: normal;
+}
+#colaboradores article img:before {
+  content: '';
+  border: 1px solid var(--secondary-color-dark);
+  border-radius: 100%;
+  width: 300px;
+  height: 300px;
+  
+  position: absolute;
+  left: -5px;
+  bottom: -10px;
+}
+#colaboradores article {
+  margin-bottom: 20px;
+}
+#colaboradores article p {
+  font-family: 'Mulish';
+}
+#colaboradores hr {
+  border-color: var(--light-secondary-color);
+}
+@media screen and (max-width: 1500px) {
+  #servicos main {
+    max-width: 850px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #front-page-header .apresentacao {
+    padding: 100px 0;
+  }
+  #servicos main {
+    max-width: 800px;
+  }
+  #colaboradores {
+    max-width: 800px;
+  }
+}
+@media screen and (max-width: 996px) {
+  #colaboradores {
+    max-width: 600px;
+  }
+  .home .overflowing-bg {
+    width:140%;
+  }
+  #servicos main {
+    max-width: 600px;
+  }
+  footer {
+    padding: 75px;
+  }
+  #blog main {
+    max-width:600px;
+  }
+}
+@media screen and (max-width:767px) {
+  #colaboradores {
+    max-width: 80%;
+  }
+  .shape-esquerda {
+    display:  none;
+  }
+  .shape-direita {
+    display:  none;
+  } 
+  #servicos main {
+    max-width: 80%;
+  }
+  .home .overflowing-bg {
+    min-width:120%;
+    min-height:400px;
+    object-fit: cover;
+  }
+  .navigation-bar {
+    display: none;
+  }
+  .mobile-nav {
+    display: block;
+    margin-left:20px;
+    justify-content: space-between;
+  }
+  .mobile-toggler {
+    float:right;
+    margin-right: 10px;
+    margin-top: 15px;
+    color:white;
+    text-decoration: none;
+    font-size:2rem;
+  }
+  .mobile-nav > a {
+    display: inline-block;
+  }
+  .mobile-nav ul li {
+    padding: 10px 20px;
+  }
+  .mobile-nav ul a {
+    color: var(--light-secondary-color);
+    text-decoration: none;
+    padding: 10px 20px;
+  }
+  .mobile-nav ul a:hover {
+    text-shadow: 0 0 8px rgba(234, 226, 209, 0.7);
+  }
+  .mobile-nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .nav-list.hidden {
+    display: none;
+  }
+  .nav-list {
+    list-style: none;
+  }
+  footer {
+    padding: 75px 40px;
+  }
+  footer .row > * {
+    width: 100%;
+    justify-content: center;
+  }
+  footer .row {
+    text-align: center;
+
+    flex-direction: column;
+    justify-content: center;
+  }
+  #blog main {
+    max-width:80%;
+  }
+  #blog main article {
+    flex-direction: column;
+  }
+  #blog main {
+    grid-auto-rows: 260px;
+    row-gap: 60px;
+  }
+  #blog main article img {
+    width: 100%;
+    max-height:150px;
+    object-fit: cover;
+  }
+  #blog main article .content {
+    margin-left:0;
+  }
+  #blog article .content h3 {
+    white-space:nowrap;
+    max-width: 80vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+  }
+  #blog article .content p {
+    white-space: nowrap;
+    max-width: 70vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .visit-blog {
+    margin: 80px 0;
+  }
+}
